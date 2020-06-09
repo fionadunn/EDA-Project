@@ -1,4 +1,5 @@
 # EDA-Project
+
 require(tidyverse)
 nfl <- nfl_teams_season_summary
 
@@ -15,25 +16,29 @@ head(nfl2)
 nfl2 %>%
   ggplot(aes(x = points_scored,
              y = wins)) +
-  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_scored, nfl$wins))) +
+  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_scored, 
+  nfl$wins))) +
   geom_point()
 
 nfl2 %>%
   ggplot(aes(x = points_allowed,
              y = wins)) +
-  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_allowed, nfl$wins))) +
+  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_allowed, 
+  nfl$wins))) +
   geom_point()
 
 nfl2 %>%
   ggplot(aes(x = points_scored,
              y = losses)) +
-  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_scored, nfl$losses))) +
+  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_scored,
+  nfl$losses))) +
   geom_point()
 
 nfl2 %>%
   ggplot(aes(x = points_allowed,
              y = losses)) +
-  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_allowed, nfl$losses))) +
+  annotate(geom = "text", x = 500, y = -0.2, label = paste("r =", cor(nfl$points_allowed,
+  nfl$losses))) +
   geom_point()
 
 
@@ -225,8 +230,4 @@ ggpairs(nfl_strat,
             "pass_off_yards_gained_per_att", "run_off_yards_gained_per_att"),
         aes(color = full_minimax_clusters)) +
   theme_bw()
-  
-  
-  
-  
   
