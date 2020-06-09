@@ -225,3 +225,8 @@ ggpairs(nfl_strat,
             "pass_off_yards_gained_per_att", "run_off_yards_gained_per_att"),
         aes(color = full_minimax_clusters)) +
   theme_bw()
+  
+  
+  
+  
+  
